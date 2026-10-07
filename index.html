@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/output.css" />
+    <title>Terminal</title>
+  </head>
+  <body>
+    <div class="terminal">
+      <div class="heading">
+        <div class="flex items-center gap-1.5 *:size-3 *:rounded-full">
+          <button class="icon:text-rose-950 bg-rose-500 hover:bg-rose-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path d="M17.2197 5.71967C17.5126 5.42678 17.9874 5.42678 18.2803 5.71967C18.5732 6.01256 18.5732 6.48732 18.2803 6.78022L13.0606 11.9999L18.2803 17.2197C18.5732 17.5126 18.5732 17.9873 18.2803 18.2802C17.9874 18.5731 17.5126 18.5731 17.2197 18.2802L12 13.0605L6.78028 18.2802C6.48738 18.5731 6.01262 18.5731 5.71973 18.2802C5.42684 17.9873 5.42684 17.5126 5.71973 17.2197L10.9395 11.9999L5.71973 6.78022C5.42684 6.48732 5.42684 6.01256 5.71973 5.71967C6.01262 5.42678 6.48738 5.42678 6.78028 5.71967L12 10.9394L17.2197 5.71967Z" fill="black" />
+            </svg>
+          </button>
+          <button class="icon:text-amber-950 bg-amber-500 hover:bg-amber-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6 12C6 11.5858 6.33579 11.25 6.75 11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H6.75C6.33579 12.75 6 12.4142 6 12Z" fill="black" />
+            </svg>
+          </button>
+          <button class="icon:text-emerald-950 bg-emerald-500 hover:bg-emerald-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8.25C10 9.2165 9.2165 10 8.25 10H3.75C3.33579 10 3 9.66421 3 9.25C3 8.83579 3.33579 8.5 3.75 8.5H8.25C8.38807 8.5 8.5 8.38807 8.5 8.25V3.75C8.5 3.33579 8.83579 3 9.25 3C9.66421 3 10 3.33579 10 3.75V8.25Z" fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21 9.25C21 9.66421 20.6642 10 20.25 10H15.75C14.7835 10 14 9.2165 14 8.25V3.75C14 3.33579 14.3358 3 14.75 3C15.1642 3 15.5 3.33579 15.5 3.75V8.25C15.5 8.38807 15.6119 8.5 15.75 8.5H20.25C20.6642 8.5 21 8.83579 21 9.25Z" fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.75 21C14.3358 21 14 20.6642 14 20.25V15.75C14 14.7835 14.7835 14 15.75 14H20.25C20.6642 14 21 14.3358 21 14.75C21 15.1642 20.6642 15.5 20.25 15.5H15.75C15.6119 15.5 15.5 15.6119 15.5 15.75V20.25C15.5 20.6642 15.1642 21 14.75 21Z" fill="black" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 21C8.83579 21 8.5 20.6642 8.5 20.25V15.75C8.5 15.6119 8.38807 15.5 8.25 15.5H3.75C3.33579 15.5 3 15.1642 3 14.75C3 14.3358 3.33579 14 3.75 14H8.25C9.2165 14 10 14.7835 10 15.75V20.25C10 20.6642 9.66421 21 9.25 21Z" fill="black" />
+            </svg>
+          </button>
+        </div>
+        <span>Terminal emulator</span>
+      </div>
+      <div id="content" class="content">
+        <p class="font-medium text-lg">Welcome to Saad's terminal. You can see my X account by using command whoami</p>
+      </div>
+      <input type="text" id="terminal-input" class="terminal-input" placeholder="$~ Enter your command. Type help to view commands" />
+    </div>
+
+    <script src="./src/js/theme.js"></script>
+    <script src="./src/js/main.js" type="module"></script>
+  </body>
+</html>
