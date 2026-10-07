@@ -29,6 +29,8 @@
     --spacing: 0.25rem;
     --container-md: 28rem;
     --container-2xl: 42rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -209,9 +211,9 @@
   .bg-rose-500 {
     background-color: var(--color-rose-500);
   }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
+  .leading-\[1\.2\] {
+    --tw-leading: 1.2;
+    line-height: 1.2;
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -242,23 +244,23 @@
   }
   .hover\:bg-amber-400 {
     &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-amber-400);
-      }
+      background-color: var(--color-amber-400);
     }
   }
   .hover\:bg-emerald-400 {
     &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-emerald-400);
-      }
+      background-color: var(--color-emerald-400);
     }
   }
   .hover\:bg-rose-400 {
     &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-rose-400);
-      }
+      background-color: var(--color-rose-400);
+    }
+  }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .icon\:text-amber-950 {
@@ -326,9 +328,7 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:hover {
-      @media (hover: hover) {
-        opacity: 70%;
-      }
+      opacity: 70%;
     }
     &:where(.dark, .dark *) {
       color: var(--color-violet-500);
@@ -429,10 +429,8 @@
         transition-duration: var(--tw-duration, var(--default-transition-duration));
       }
       &:hover {
-        @media (hover: hover) {
-          & svg {
-            opacity: 100%;
-          }
+        & svg {
+          opacity: 100%;
         }
       }
     }
@@ -460,8 +458,8 @@
     width: 100%;
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
     caret-color: var(--color-violet-500);
     --tw-outline-style: none;
     outline-style: none;
@@ -472,6 +470,10 @@
         color: color-mix(in oklab, var(--color-slate-950) 70%, transparent);
       }
     }
+    @media (width >= 40rem) {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
     &:where(.dark, .dark *) {
       &::placeholder {
         color: color-mix(in srgb, oklch(98.5% 0 none) 70%, transparent);
@@ -481,6 +483,10 @@
       }
     }
   }
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -613,13 +619,10 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
@@ -648,7 +651,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-leading: initial;
     }
   }
 }

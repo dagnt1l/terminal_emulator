@@ -45,7 +45,7 @@
   }
 
   .terminal-input {
-    @apply w-full px-4 py-2 text-sm caret-violet-500 outline-none [caret-shape:block] placeholder:text-slate-950/70 dark:placeholder:text-zinc-50/70;
+    @apply w-full px-4 py-2 text-xs sm:text-sm caret-violet-500 outline-none [caret-shape:block] placeholder:text-slate-950/70 dark:placeholder:text-zinc-50/70;
   }
 }
 
