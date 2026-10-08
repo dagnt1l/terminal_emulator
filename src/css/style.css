@@ -7,7 +7,7 @@
     @apply dark:scheme-dark;
   }
   body {
-    @apply h-screen bg-linear-to-b from-violet-300 from-10% via-violet-700 to-violet-900 to-90% text-slate-950 dark:text-zinc-100;
+    @apply h-screen bg-linear-to-b from-violet-400 from-10% via-violet-700 to-violet-900 to-90% text-slate-950 dark:text-zinc-100;
   }
 
   a {

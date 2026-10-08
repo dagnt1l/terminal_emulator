@@ -3,6 +3,7 @@ export const commands = {
   theme: switchTheme,
   help: help,
   math: math,
+  bg: bg,
   clear: null,
 }
 
@@ -42,4 +43,21 @@ function switchTheme(option){
 
 function math(option){
   return `<p>${eval(option)}</p>`;
+}
+
+function bg(option){
+
+  if(option != null){
+
+    const body = document.body;
+    body.style.backgroundImage = `url(${option})`;
+    body.style.backgroundRepeat = 'no-repeat';
+    body.style.backgroundSize = 'cover';
+
+    return `<p>Background changed</p>`
+
+  }
+
+  return `<p>bg -url</p>`;
+
 }
